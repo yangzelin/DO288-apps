@@ -4,7 +4,7 @@ FROM quay.io/redhattraining/httpd-parent
 # Change the port to 8080
 EXPOSE 8080
 
-# ONBUILD COPY src/ /var/www/html
+ONBUILD COPY src/ /var/www/html
 # Labels consumed by OpenShift
 LABEL io.k8s.description="A basic Apache HTTP Server child image, uses ONBUILD" \
       io.k8s.display-name="Apache HTTP Server" \
